@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y chromium
 WORKDIR /app
 COPY . .
 
-RUN npm install
+RUN npm ci
 
 FROM source as linter
 COPY --from=source /app /app
